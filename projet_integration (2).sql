@@ -103,13 +103,6 @@ CREATE TABLE IF NOT EXISTS `reservations` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `reservations`
---
-
-INSERT INTO `reservations` (`id`, `name`, `cin`, `phone`, `email`, `societe_type`, `institution_id`, `service_id`, `institution`, `service`, `reservation_date`, `reservation_time`, `ticket_number`, `queue_position`, `notifications`, `created_at`, `status`, `updated_at`) VALUES
-(11, 'jasser kafsi', '1231231', '+53 01 56 62', 'kafsijasser2@gmail.com', 'prv', 4, 7, 'Orange Tunisie', 'Forfaits', '2025-05-23', '15:00:00', 'T-3746', 1, 1, '2025-05-12 20:19:00', 'completed', '2025-05-12 20:20:13'),
-(10, 'jasser kafsi', '1231231', '+53 01 56 62', 'kafsijasser2@gmail.com', 'pub', 2, 3, 'CNSS', 'Pensions', '2025-05-24', '10:00:00', 'T-2722', 1, 1, '2025-05-12 20:07:35', 'waiting', '2025-05-12 20:07:35');
 
 -- --------------------------------------------------------
 
@@ -186,12 +179,6 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `utilisateurs`
---
-
-INSERT INTO `utilisateurs` (`id`, `email`, `nom`, `date_naissance`, `ville`, `code_postal`, `mot_de_passe`, `adresse`, `created_at`) VALUES
-(2, 'kafsijasser2@gmail.com', 'jasser kafsi', '2004-07-04', 'sousse', '5070', '$2y$10$9o7gJxv0AU0KNlA8hOqwqereIEP12KetXQm/aOXjW5FrsRTARVbRm', 'sousse', '2025-05-12 19:23:58');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
