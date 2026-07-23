@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File d'attente - Mairie</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        #cancel-button {
+            width: 100%;
+            padding: 12px;
+            background: #c10707;
+            color: #fff;
+            border: none;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Mairie">
+        </div>
+
+        <div class="card queue-card">
+            <h1>Votre position dans la file</h1>
+
+            <div class="queue-info">
+                <div class="info-item">
+                    <span class="label">Numéro de ticket:</span>
+                    <span id="ticket-number" class="value"></span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Service:</span>
+                    <span id="service-type" class="value"></span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Temps d'attente estimé:</span>
+                    <span id="wait-time" class="value"></span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Position dans la file:</span>
+                    <span id="queue-position" class="value"></span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="notification-area">
+                <p id="notification-text"></p>
+            </div>
+
+            <button class="btn" onclick="window.location.href='reservation.html'">Nouvelle réservation</button>
+            <form action="annuler_reservation.php" method="get">
+                <input type="hidden" name="ticket" id="cancel-ticket-input">
+                <button id="cancel-button" type="submit">Annuler réservation</button>
+            </form>
+
+            <script>
+                // Set the ticket number when page loads
+                document.addEventListener('DOMContentLoaded', function() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const ticketNumber = urlParams.get('ticket');
+                    
+                    if (ticketNumber) {
+                        document.getElementById('cancel-ticket-input').value = ticketNumber;
+                    }
+                });
+            </script>
+
+
+        </div>
+    </div>
+
+    <script src="js/queue-script.js"></script>
+</body>
+
+</html>

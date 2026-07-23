@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation en ligne - Mairie</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Mairie">
+        </div>
+
+            <div class="card">
+                <h1>Réservez votre place en ligne</h1>
+                <p class="subtitle">Évitez les longues attentes en réservant votre créneau</p>
+                
+                <form id="reservationForm" method="POST">
+        <div class="form-group">
+            <label for="name">Nom complet*</label>
+            <input type="text" id="fullname" name="name" placeholder="Votre nom complet" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="cin">Numéro de carte d'identité*</label>
+            <input type="text" id="cin" name="cin" placeholder="012345678" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Numéro de téléphone*</label>
+            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com">
+        </div>
+        
+        <div class="form-group">
+            <label for="societe_type">Type de société*</label>
+            <select id="societe_type" name="societe_type" required>
+                <option value="">Sélectionnez un type</option>
+                <option value="pub">Public</option>
+                <option value="prv">Privé</option>
+            </select>
+        </div>
+        
+         <div class="form-group">
+            <label for="institution">Institution*</label>
+            <select id="institution" name="institution_id" required>
+                <option value="">Sélectionnez une institution</option>
+                <option value="1">CNAM</option>
+                <option value="2">CNSS</option>
+                <option value="3">Tunisie Telecom</option>
+                <option value="4">Orange Tunisie</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="service">Service demandé*</label>
+            <select id="service" name="service_id" required>
+                <option value="">Sélectionnez d'abord une institution</option>
+            </select>
+        </div>
+                
+            <div class="form-group">
+            <label for="date">Date souhaitée*</label>
+            <input type="date" id="date" name="reservation_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Heure souhaitée*</label>
+            <select id="time" name="reservation_time" required>
+                <option value="">Choisissez un créneau</option>
+                <!-- Times will be populated by JavaScript -->
+            </select>
+        </div>
+        
+        <div class="form-group checkbox">
+            <input type="checkbox" id="notifications" name="notifications" value="1">
+            <label for="notifications">Recevoir des alertes par SMS</label>
+        </div>
+        
+        <button type="submit" class="btn">Valider ma réservation</button>
+    </form>
+        </div>
+    </div>
+
+    <script src="js/reservation-script.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

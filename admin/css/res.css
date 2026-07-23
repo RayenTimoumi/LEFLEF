@@ -1,0 +1,97 @@
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-waiting {
+    background-color: #f39c12;
+    color: white;
+}
+
+.status-processing {
+    background-color: #3498db;
+    color: white;
+}
+
+.status-completed {
+    background-color: #27ae60;
+    color: white;
+}
+
+.status-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.status-btn {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-waiting {
+    background-color: #f39c12;
+    color: white;
+}
+
+.btn-processing {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-completed {
+    background-color: #27ae60;
+    color: white;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+    background-color: #f5f7fa;
+    font-weight: 500;
+}
+
+.data-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 500;
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

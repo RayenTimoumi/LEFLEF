@@ -1,0 +1,213 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 120px;
+}
+
+.logo-preview {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #27ae60;
+    color: #27ae60;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f5f7fa;
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.table-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.default-logo {
+    width: 50px;
+    height: 50px;
+    background-color: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #27ae60;
+    font-size: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.data-table th {
+    background-color: #f5f7fa;
+    font-weight: 500;
+}
+
+.data-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #27ae60;
+    color: #27ae60;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.form-group textarea {
+    min-height: 100px;
+}
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-submit:hover {
+    background-color: #45a049;
+}
+.file-upload {
+    display: flex;
+    flex-direction: column;
+}
+.file-upload-preview {
+    margin-top: 10px;
+    max-width: 200px;
+    max-height: 200px;
+    display: none;
+}
